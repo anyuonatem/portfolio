@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anyuon Atem (MrNico) | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --card: #141414;
+            --accent: #00d4ff;
+            --whatsapp: #25D366;
+            --text: #e0e0e0;
+            --text-muted: #888;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            margin-bottom: 60px;
+            border-left: 4px solid var(--accent);
+            padding-left: 20px;
+        }
+
+        .name-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 0;
+            color: #fff;
+            letter-spacing: -1px;
+        }
+
+        .nickname {
+            color: var(--accent);
+            font-size: 1.3rem;
+            display: block;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+
+        .about-box {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #222;
+            font-size: 1.1rem;
+        }
+
+        /* Skill Progress Bars */
+        .skill-container { margin-bottom: 20px; }
+        .skill-label { display: flex; justify-content: space-between; margin-bottom: 8px; }
+        .progress-bg { background: #222; border-radius: 10px; height: 10px; width: 100%; overflow: hidden; }
+        .progress-fill { background: var(--accent); height: 100%; border-radius: 10px; }
+
+        /* Interest Cards */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .interest-card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+        .interest-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .interest-card i { font-size: 2rem; color: var(--accent); margin-bottom: 15px; display: block; }
+
+        /* Education Timeline */
+        .edu-item {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 40px;
+            border-left: 2px solid #222;
+        }
+        .edu-item::before {
+            content: "";
+            position: absolute;
+            left: -7px; top: 5px;
+            width: 12px; height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent);
+        }
+        .degree { font-size: 1.2rem; font-weight: 700; color: #fff; display: block; }
+        .institution { color: var(--text); display: block; font-weight: 500; }
+        .date { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* WhatsApp Button */
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--whatsapp);
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        .contact-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(37, 211, 102, 0.4); }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="name-title">Anyuon Atem</h1>
+            <span class="nickname">Popularly known as <strong>MrNico</strong></span>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-box">
+                I am Anyuon Atem popularly known as MrNico. I’m a junior computer science student who loves learning how technology works behind the scenes and have gained little knowledge of Python and C programming. I enjoy coding, experimenting with new ideas, and improving my skills through practice. I’m always curious, motivated, and excited about building things that solve real problems. Alongside my work in technology, I am also learning how to trade financial markets and exploring how technology and AI can be applied to data-driven trading strategies.
+            </div>
+        </section>
+
+        <section id="interests">
+            <h2>Core Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <i class="fas fa-brain"></i>
+                    <strong>Financial AI</strong>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-layer-group"></i>
+                    <strong>Full Stack Dev</strong>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-chart-pie"></i>
+                    <strong>Data Analysis</strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Learning Progress</h2>
+            <div class="skill-container">
+                <div class="skill-label"><span>Programming (Python & C)</span><span>40%</span></div>
+                <div class="progress-bg"><div class="progress-fill" style="width: 40%;"></div></div>
+            </div>
+            <div class="skill-container">
+                <div class="skill-label"><span>Trading & Data Analysis</span><span>55%</span></div>
+                <div class="progress-bg"><div class="progress-fill" style="width: 55%;"></div></div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+
+            <div class="edu-item">
+                <span class="degree">B.Tech in Computer Science (Ongoing)</span>
+                <span class="institution">University of Juba, Juba City, South Sudan</span>
+                <span class="date">2024 – 2029</span>
+            </div>
+
+            <div class="edu-item">
+                <span class="degree">Certificate in Computer Literacy</span>
+                <span class="institution">Eagles’ Computer Training School, Juba, South Sudan</span>
+                <span class="date">January 2021 – June 2021</span>
+            </div>
+
+            <div class="edu-item">
+                <span class="degree">Certificate of Secondary Education</span>
+                <span class="institution">Martyrs’ Memorial Secondary School, Juba, South Sudan</span>
+                <span class="date">2019 – 2022</span>
+            </div>
+
+            <div class="edu-item">
+                <span class="degree">Certificate of Primary Education</span>
+                <span class="institution">Sunlight Primary School, Bor, South Sudan</span>
+                <span class="date">2011 – 2018</span>
+            </div>
+        </section>
+
+        <section id="contact" style="text-align: center;">
+            <h2>Get In Touch</h2>
+            <p>Have a question or a project in mind? Reach out via WhatsApp!</p>
+            <a href="https://wa.me/211922489393" class="contact-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </section>
+
+        <footer>
+            &copy; 2025 Anyuon Atem (MrNico). All Rights Reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
